@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		
 		<?PHP
-			echo'<title>Mismatch - ' . $page_title . '</title>';
+			echo'<title>Moment - ' . $page_title . '</title>';
 		?>
 		
 		<link href="style.css" rel="stylesheet" />
@@ -12,5 +12,5 @@
 	<body>
 		
 <?PHP
-	echo'<h3>Mismatch - ' . $page_title . '</h3>';
+	echo'<h3>Moment - ' . $page_title . '</h3>';
 ?>
