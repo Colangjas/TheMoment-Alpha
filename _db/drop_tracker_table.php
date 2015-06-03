@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create moment_alpha_user TABLE</title>
+  <title>Drop moment_alpha_tracker TABLE</title>
 </head>
 <body>
 <?php
@@ -11,22 +11,7 @@
   
 $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
-$query = "CREATE TABLE moment_alpha_tracker (
-
-	record_id INT AUTO_INCREMENT,
-	user_id INT,
-	t_date DATE,
-	t_time TIME,
-	t_trigger VARCHAR(20),
-	emo_lvl INT,
-	duration INT,
-	place VARCHAR(20),
-	av_cope VARCHAR(150),
-	cr_cope VARCHAR(150),
-	thoughts VARCHAR(150),
-	PRIMARY KEY (record_id)
-
-)";
+$query = "DROP TABLE moment_alpha_tracker";
  
 if (mysqli_query ($dbc, $query)) {
  	echo "The query was successfully executed!<br />";
