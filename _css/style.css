@@ -18,3 +18,5 @@ td.label {
 img.profile {
   vertical-align: top;
 }
+
+li { display: inline;}

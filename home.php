@@ -32,7 +32,7 @@
 						$_SESSION['username'] = $row['username'];
 						setcookie('user_id', $row['user_id'], time() + (60 * 60 * 24 * 30)); // expires in 30 days
 						setcookie('username', $row['username'], time() + (60 * 60 * 24 * 30)); // expires in 30 days
-						$home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/home.php';
+						$home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/tracker.php';
 						header('Location: ' . $home_url);
 						
 						echo'<p>Login Successful!</p>';
