@@ -1,5 +1,6 @@
 <?PHP
-	
+	// Disable error reporting
+	error_reporting(E_ALL ^ E_NOTICE);
 	// Start the session
 	require_once('startsession.php');
 
@@ -16,12 +17,10 @@
 	
 	// Connect to the database
 	$dbc = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
-	
-	// if (!isset($_SESSION['user_id'])){	
+	// Login username
+	if (!isset($_SESSION['user_id'])){	
+		$login_username = mysqli_real_escape_string($dbc, trim($_POST['lusername']));
 		if (!empty($login_username)) {
-					
-					// Login username
-					$login_username = mysqli_real_escape_string($dbc, trim($_POST['lusername']));
 					// Look up the username in the database
 					$query="SELECT user_id, username  FROM moment_alpha_user WHERE username = '$login_username'";
 					$data = mysqli_query($dbc, $query);
@@ -35,6 +34,9 @@
 						setcookie('username', $row['username'], time() + (60 * 60 * 24 * 30)); // expires in 30 days
 						$home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/home.php';
 						header('Location: ' . $home_url);
+						
+						echo'<p>Login Successful!</p>';
+						
 					}else {
 						// The username/password are incorrect so set an error message
 						$error_msg	= 'You must enter your username to log in.';		
@@ -43,7 +45,7 @@
 						// The username/password are incorrect so set an error message
 						$error_msg	= 'You must enter your username to log in.';		
 				}
-	// }
+	}
 			
 			if (isset($_POST['submit'])) {
 					// Registration username
@@ -67,7 +69,7 @@
 					} else {
 						// An account already exists for this username, so display an error message
 						echo '<p class="error">An account already exists for this username. Use a different one.</p>';
-						$username = "";
+						$reg_username = "";
 				}
 			} else {
 				echo'<p class="error">You must enter all of the sign-up data.</p>';
@@ -78,19 +80,19 @@
 		mysqli_close($dbc);
 ?>	
 
-<p>Enter a username and to sign up to The Moment Alpha.</p>
+<p>To Register enter a username and to sign up to The Moment Alpha.</p>
 		<form method="post" action="<?PHP echo $_SERVER['PHP_SELF']?>">
 			<fieldset>
 				<legend>Registration Info</legend>
 				<label for="rusername">Username: </label>
-				<input type="text" id="rusername" name="rusername" value="<?PHP if (!empty($reg_username)) echo $reg_username; ?>" /><br />
+				<input type="text" id="rusername" name="rusername" value="<?PHP if (!empty($reg_username)) echo $reg_username; ?>" maxlength="20"/><br />
 			</fieldset>
 			<input type="submit" value="Sign Up" name="submit" />
 		</form>
 
 
 
-<p>Enter your username and to login to The Moment Alpha.</p>
+<p>To login enter your username and to login to The Moment Alpha.</p>
 		<form method="post" action="<?PHP echo $_SERVER['PHP_SELF']?>">
 			<fieldset>
 				<legend>Login Info</legend>
