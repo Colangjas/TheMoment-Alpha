@@ -13,56 +13,89 @@
 	// Show the navigation menu
 	require_once('navmenu.php');
 	
+	
+	// Connect to the database
+	$dbc = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
+	
+	// if (!isset($_SESSION['user_id'])){	
+		if (!empty($login_username)) {
+					
+					// Login username
+					$login_username = mysqli_real_escape_string($dbc, trim($_POST['lusername']));
+					// Look up the username in the database
+					$query="SELECT user_id, username  FROM moment_alpha_user WHERE username = '$login_username'";
+					$data = mysqli_query($dbc, $query);
+					
+					if (mysqli_num_rows($data) == 1) {
+						// The log-in is ok so set the user ID and username session vars (and cookies), and redirect to the home page
+						$row = mysqli_fetch_array($data);
+						$_SESSION['user_id'] = $row['user_id'];
+						$_SESSION['username'] = $row['username'];
+						setcookie('user_id', $row['user_id'], time() + (60 * 60 * 24 * 30)); // expires in 30 days
+						setcookie('username', $row['username'], time() + (60 * 60 * 24 * 30)); // expires in 30 days
+						$home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/home.php';
+						header('Location: ' . $home_url);
+					}else {
+						// The username/password are incorrect so set an error message
+						$error_msg	= 'You must enter your username to log in.';		
+				}
+			}else {
+						// The username/password are incorrect so set an error message
+						$error_msg	= 'You must enter your username to log in.';		
+				}
+	// }
+			
+			if (isset($_POST['submit'])) {
+					// Registration username
+				// Grab the profile data from the POST
+				$reg_username = mysqli_real_escape_string($dbc, trim($_POST['rusername']));
+				
+				if (!empty($reg_username)) {
+					// Make sure someone isn't already registered using this username
+					$query = "SELECT * FROM moment_alpha_user WHERE username = '$reg_username'";
+					$data = mysqli_query($dbc, $query);
+					if (mysqli_num_rows($data) == 0) {
+						// The username is unique, so insert the data into the database
+						$query = "INSERT INTO moment_alpha_user (username, join_date) VALUES ('$reg_username', NOW())";
+						mysqli_query($dbc, $query);
+						
+						// Confirm success with user
+						echo'<p>Your new account has been successfully created. You\'re now ready to <a href="home.php">log in</a></p>';
+						
+						mysqli_close($dbc);
+						exit();
+					} else {
+						// An account already exists for this username, so display an error message
+						echo '<p class="error">An account already exists for this username. Use a different one.</p>';
+						$username = "";
+				}
+			} else {
+				echo'<p class="error">You must enter all of the sign-up data.</p>';
+			}
+		}
+		
+		
+		mysqli_close($dbc);
 ?>	
 
-<p>Enter you username and to sign up to The Moment Alpha.</p>
+<p>Enter a username and to sign up to The Moment Alpha.</p>
 		<form method="post" action="<?PHP echo $_SERVER['PHP_SELF']?>">
 			<fieldset>
 				<legend>Registration Info</legend>
-				<label for="username">Username: </label>
-				<input type="text" id="username" name="username" value="<?PHP if (!empty($username)) echo $username; ?>" /><br />
+				<label for="rusername">Username: </label>
+				<input type="text" id="rusername" name="rusername" value="<?PHP if (!empty($reg_username)) echo $reg_username; ?>" /><br />
 			</fieldset>
 			<input type="submit" value="Sign Up" name="submit" />
 		</form>
 
-<?PHP
-	
-	// The user already has a log-in and needs to update their current sheet
-	// Grab the user-entered log-in data
-	$user_username = mysqli_real_escape_string($dbc, trim($_POST['username']));
-	$user_password = mysqli_real_escape_string($dbc, trim($_POST['password']));
-	
-	if (!empty($user_username)) {
-				// Look up the username in the database
-				$query="SELECT user_id, username  FROM users WHERE username = '$user_username'";
-				$data = mysqli_query($dbc, $query);
-				
-				if (mysqli_num_rows($data) == 1) {
-					// The log-in is ok so set the user ID and username session vars (and cookies), and redirect to the home page
-					$row = mysqli_fetch_array($data);
-					$_SESSION['user_id'] = $row['user_id'];
-					$_SESSION['username'] = $row['username'];
-					setcookie('user_id', $row['user_id'], time() + (60 * 60 * 24 * 30)); // expires in 30 days
-					setcookie('username', $row['username'], time() + (60 * 60 * 24 * 30)); // expires in 30 days
-					$home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/mindex.php';
-					header('Location: ' . $home_url);
-				}else {
-					// The username/password are incorrect so set an error message
-					$error_msg	= 'You must enter your username and password to log in.';		
-			}
-		}else {
-					// The username/password are incorrect so set an error message
-					$error_msg	= 'You must enter your username and password to log in.';		
-			}
 
-?>
 
-<p>Enter you username and to login to The Moment Alpha.</p>
+<p>Enter your username and to login to The Moment Alpha.</p>
 		<form method="post" action="<?PHP echo $_SERVER['PHP_SELF']?>">
 			<fieldset>
 				<legend>Login Info</legend>
-				<label for="username">Username: </label>
-				<input type="text" id="username" name="username" value="<?PHP if (!empty($username)) echo $username; ?>" /><br />
+				<label for="lusername">Username: </label>
+				<input type="text" id="lusername" name="lusername" value="<?PHP if (!empty($login_username)) echo $login_username; ?>" /><br />
 			</fieldset>
-			<input type="submit" value="Sign Up" name="submit" />
+			<input type="submit" value="Login" name="login" />
 		</form>

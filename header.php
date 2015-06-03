@@ -7,7 +7,7 @@
 			echo'<title>Moment - ' . $page_title . '</title>';
 		?>
 		
-		<link href="style.css" rel="stylesheet" />
+		<link href="_css/style.css" rel="stylesheet" />
 	</head>
 	<body>
 		

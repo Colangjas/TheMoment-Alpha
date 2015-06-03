@@ -3,6 +3,7 @@
 	echo '<hr />';
 	if(isset($_SESSION['username'])) {
 		echo'<a href="home.php">Home</a>';
+		echo'<a href="tracker.php">Update Tracker</a>';
 		echo'<a href="yresults.php">My Results</a>';
 		echo'<a href="logout.php">Log Out <span style="color: red;">(' . $_SESSION['username'] . ')</span></a>';
 	} else {
