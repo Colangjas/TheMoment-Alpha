@@ -1,3 +1,47 @@
+body {
+	background: #222222; color: #FFFFFF;
+	max-width: 1024px; min-width: 480px; 
+	margin: 0 auto;
+    font: normal bold 18px/32px Georgia, serif;
+}
+
+h3 {background: #0cc87c; border-radius: 3px; font-size: 1.2em;}
+fieldset {border-color: #ffb20f; border-radius: 3px;}
+hr {border-color: #dd0d82;}
+a {color: #FFFFFF; text-decoration: none;}
+a:hover {color: #FFFFFF; text-decoration: underline;}
+#quest, #moods {border: #ff570f; border-radius: 3px; margin: 18px 0;}
+#quest {display: inline; float: left; width: 470px;}
+#moods {display: block; clear: both; width: 960px;}
+#quest:nth-of-type(4) {clear: left;}
+.onblack {color: #ff570f;}
+
+input[type="submit"] {
+	background: #222222; border-color: #dd0d82; border-radius: 3px;
+	color: #FFFFFF; padding: 5px; margin: 10px;
+	font: normal bold 20px/32px Georgia, serif;
+}
+
+input[type="text"],  select{
+	background: #ffffff; border-color: #0cc87c; 
+	color: #000000; padding: 5px; font: normal bold 20px/32px Georgia, serif;
+	height: 50px; width: 180px; border-radius: 3px;
+}
+
+input[type="number"] {
+	background: #ffffff; border-color: #0cc87c; 
+	color: #000000; padding: 5px; font: normal bold 20px/32px Georgia, serif;
+	height: 50px; width: 100px; border-radius: 3px;
+}
+
+input[type="range"] { width: 600px;}
+
+textarea {
+	background: #ffffff; border-color: #0cc87c; 
+	color: #000000; padding: 5px; font: normal bold 20px/32px Georgia, serif;
+	height: 200px; width: 400px; border-radius: 3px;
+}
+
 .error {
   font-weight: bold;
   color: #FF0000;
@@ -7,7 +51,7 @@
   font-style: italic;
 }
 
-form label {  display: inline-block;  width: 150px;
+form label {  display: inline-block;  width: 270px;
   font-weight: bold;
 }
 

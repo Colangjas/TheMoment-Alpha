@@ -17,12 +17,12 @@ $query = "CREATE TABLE moment_alpha_tracker (
 	user_id INT,
 	t_date DATE,
 	t_time TIME,
-	t_trigger VARCHAR(20),
+	feeling VARCHAR(20),
 	emo_lvl INT,
+	t_trigger VARCHAR(20),
 	duration INT,
 	place VARCHAR(20),
-	av_cope VARCHAR(150),
-	cr_cope VARCHAR(150),
+	cope_str VARCHAR(150),
 	thoughts VARCHAR(150),
 	PRIMARY KEY (record_id)
 

@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Display moment_alpha_user TABLE</title>
-  <link href="../_css/style_table.css" rel="stylesheet" />
-</head>
-<body>
-<?php
-// Set the variables for the database access:
-  require_once('connectvars.php');
+<?PHP
+
+	// Start the session
+	require_once('startsession.php');
+
+	
+	// Insert the page header
+	$page_title = 'results';
+	require_once('header.php');
+	
+	// Set the variables for the database access:
+	require_once('connectvars.php');
   
-$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+	$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
+	$user_id = $_SESSION['user_id'];
 
-	$query = "SELECT * from moment_alpha_tracker";
+	$query = "SELECT * FROM moment_alpha_tracker WHERE '$user_id' = user_id";
 	$result = mysqli_query ($dbc, $query) or die("Error querying database ".mysqli_error($dbc));
 	// mismatrch table
 	

@@ -45,7 +45,7 @@
 						// The username/password are incorrect so set an error message
 						$error_msg	= 'You must enter your username to log in.';		
 				}
-	}
+	}else{echo '<p class="error">You are logged in as ' . $_SESSION['username'] . '. If this isn\'t you please logout and sign in again</p>';}
 			
 			if (isset($_POST['submit'])) {
 					// Registration username
