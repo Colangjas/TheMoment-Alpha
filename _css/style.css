@@ -22,7 +22,7 @@ input[type="submit"] {
 	font: normal bold 20px/32px Georgia, serif;
 }
 
-input[type="text"],  select{
+input[type="text"], input[type="password"], input[type="email"],  select{
 	background: #ffffff; border-color: #0cc87c; 
 	color: #000000; padding: 5px; font: normal bold 20px/32px Georgia, serif;
 	height: 50px; width: 180px; border-radius: 3px;
