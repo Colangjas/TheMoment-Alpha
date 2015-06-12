@@ -47,6 +47,7 @@
 				}
 	}else{echo '<p class="error">You are logged in as ' . $_SESSION['username'] . '. If this isn\'t you please logout and sign in again</p>';}
 			
+		if (!isset($_SESSION['user_id'])){
 			if (isset($_POST['submit'])) {
 					// Registration username
 				// Grab the profile data from the POST
@@ -62,7 +63,7 @@
 						mysqli_query($dbc, $query);
 						
 						// Confirm success with user
-						echo'<p>Your new account has been successfully created. You\'re now ready to <a href="home.php">log in</a></p>';
+						echo'<p>Your new account has been successfully created. You\'re now ready to <a class="onblack" href="home.php">log in</a></p>';
 						
 						mysqli_close($dbc);
 						exit();
@@ -73,8 +74,9 @@
 				}
 			} else {
 				echo'<p class="error">You must enter all of the sign-up data.</p>';
+				}
 			}
-		}
+		}else {echo'<p>You must <a class="onblack" href="logout.php">logout</a> to register a new account.</p>';}
 		
 		
 		mysqli_close($dbc);

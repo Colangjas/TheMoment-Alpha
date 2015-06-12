@@ -5,8 +5,8 @@
 
 	
 	// Insert the page header
-	$page_title = 'results';
-	require_once('header.php');
+	$page_title = 'Results';
+	require_once('tableheader.php');
 	
 	// Set the variables for the database access:
 	require_once('connectvars.php');
@@ -54,5 +54,9 @@
 	echo "</table>";
 mysqli_close($dbc);
 ?>
+
+<form>
+	<input type="button" value="Print This Page" onClick="window.print()"
+</form>
 </body>
 </html>

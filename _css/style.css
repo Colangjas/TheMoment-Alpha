@@ -1,15 +1,15 @@
 body {
-	background: #222222; color: #FFFFFF;
+	background: #FFFFFF; color: #222222;
 	max-width: 1024px; min-width: 480px; 
 	margin: 0 auto;
     font: normal bold 18px/32px Georgia, serif;
 }
 
-h3 {background: #0cc87c; border-radius: 3px; font-size: 1.2em;}
+h3 {background: #0cc87c; color: #ffffff; border-radius: 3px; font-size: 1.2em;}
 fieldset {border-color: #ffb20f; border-radius: 3px;}
 hr {border-color: #dd0d82;}
-a {color: #FFFFFF; text-decoration: none;}
-a:hover {color: #FFFFFF; text-decoration: underline;}
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
 #quest, #moods {border: #ff570f; border-radius: 3px; margin: 18px 0;}
 #quest {display: inline; float: left; width: 470px;}
 #moods {display: block; clear: both; width: 960px;}
