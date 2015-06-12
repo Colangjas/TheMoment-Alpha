@@ -82,39 +82,47 @@
 		mysqli_close($dbc);
 ?>	
 
-<p>To Register enter a username and to sign up to The Moment Alpha.</p>
-		<form method="post" action="<?PHP echo $_SERVER['PHP_SELF']?>">
-			<fieldset>
-				<legend>Registration Info</legend>
-				<p>
-					<label for="remail">Email: </label>
-					<input type="email" id="remail" name="remail" value="<?PHP if (!empty($reg_username)) echo $reg_username; ?>" required />
-				</p>
-				<p><label for="rusername">Username: </label>
-					<input type="text" id="rusername" name="rusername" value="<?PHP if (!empty($reg_username)) echo $reg_username; ?>" maxlength="20" required />
-				</p>
-				<p>
-					<label for="rpassword">Password: </label>
-					<input type="password" id="rpassword" name="rpassword" maxlength="20" required />
-				</p>
-			</fieldset>
-			<input type="submit" value="Sign Up" name="submit" />
-		</form>
 
 
-
-<p>To login enter your username and to login to The Moment Alpha.</p>
-		<form method="post" action="<?PHP echo $_SERVER['PHP_SELF']?>">
-			<fieldset>
-				<legend>Login Info</legend>
-				<p>
-					<label for="lusername">Username: </label>
-					<input type="text" id="lusername" name="lusername" value="<?PHP if (!empty($login_username)) echo $login_username; ?>" required  />
-				</p>
-				<p>
-					<label for="lpassword">Password: </label>
-					<input type="password" id="lpassword" name="lpassword" maxlength="20" required />
-				</p>
-			</fieldset>
-			<input type="submit" value="Login" name="login" />
-		</form>
+<section class="forms">
+	<div class="register">
+		<p>To Register enter a username and to sign up to The Moment Alpha.</p>
+				<form method="post" action="<?PHP echo $_SERVER['PHP_SELF']?>">
+					<fieldset>
+						<legend>Registration Info</legend>
+						<p>
+							<label for="remail">Email: </label>
+							<input type="email" id="remail" name="remail" value="<?PHP if (!empty($reg_username)) echo $reg_username; ?>" required />
+						</p>
+						<p><label for="rusername">Username: </label>
+							<input type="text" id="rusername" name="rusername" value="<?PHP if (!empty($reg_username)) echo $reg_username; ?>" maxlength="20" required />
+						</p>
+						<p>
+							<label for="rpassword">Password: </label>
+							<input type="password" id="rpassword" name="rpassword" maxlength="20" required />
+						</p>
+					</fieldset>
+					<input type="submit" value="Sign Up" name="submit" />
+				</form>
+	</div>
+	
+	
+	
+	<div class="login">
+		<p>To login enter your username and to login to The Moment Alpha.</p>
+				<form method="post" action="<?PHP echo $_SERVER['PHP_SELF']?>">
+					<fieldset>
+						<legend>Login Info</legend>
+						<p>
+							<label for="lusername">Username: </label>
+							<input type="text" id="lusername" name="lusername" value="<?PHP if (!empty($login_username)) echo $login_username; ?>" required  />
+						</p>
+						<p>
+							<label for="lpassword">Password: </label>
+							<input type="password" id="lpassword" name="lpassword" maxlength="20" required />
+						</p>
+					</fieldset>
+					<input type="submit" value="Login" name="login" />
+				</form>
+	</div>
+</section>
