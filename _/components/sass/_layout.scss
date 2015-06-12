@@ -1,4 +1,4 @@
-//Susy setup ------------------------------------
+//Susy setup -----------------------------------
 $total-columns        : 12;
 $column-width         : 4em;
 $gutter-width         : 1em;
@@ -11,3 +11,15 @@ $medium               : 47em;
 $large                : 75em;
 
 
+// Wrapper ---------------------------------
+
+.wrapper {
+	@include container;
+	padding: 0 3%;
+}
+
+// Form --------------------------------------
+
+.forms {
+	background: $color-primary-0;
+}
