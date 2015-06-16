@@ -8,6 +8,7 @@
 		?>
 		
 		<link href="_css/style_table.css" rel="stylesheet" />
+	
 	</head>
 	<body>
 		

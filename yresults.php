@@ -17,6 +17,9 @@
 
 	$query = "SELECT * FROM moment_alpha_tracker WHERE '$user_id' = user_id";
 	$result = mysqli_query ($dbc, $query) or die("Error querying database ".mysqli_error($dbc));
+	
+	$testnum = 3373990000000;
+	
 	// mismatrch table
 	
 	echo "<table border='1'; align='center'; style='text-align:center;'>";
@@ -52,11 +55,62 @@
 		echo "</tr>";
 	}
 	echo "</table>";
-mysqli_close($dbc);
+	
 ?>
+
+<div id="series_chart_div" style="width: 900px; height: 500px;"></div>
+
+
+
 
 <form>
 	<input type="button" value="Print This Page" onClick="window.print()"
 </form>
+
+		
+		    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawSeriesChart);
+
+    function drawSeriesChart() {
+
+var tableLength = document.querySelectorAll('tr').length - 6;
+var country = ['CAN','DEU','DNK','EGY','GBR','IRN','IRQ','ISR','RUS','USA'];
+var continent = ['North America','Europe','Middle East'];
+var randNum1 = Math.floor(Math.random()*11);
+var randNum2 = Math.floor(Math.random()*90);
+var randNum3 = Math.random()*2;
+var randNum4= Math.floor(Math.random()*3);
+var randNum5 = Math.floor(Math.random()*40000000);
+
+var tData = [['ID', 'Life Expectancy', 'Fertility Rate', 'Region','Population']];
+
+for (i=0; i<tableLength; i++) {
+			
+			tData.push([country[randNum1] ,80.5 ,1.5 ,continent[randNum4] ,565461846] );
+		}
+
+ var data = google.visualization.arrayToDataTable(tData);
+
+      var options = {
+        title: 'This is a test chart to see if I can develop this app',
+        hAxis: {title: 'Barf'},
+        vAxis: {title: 'Fertility Rate'},
+        bubble: {textStyle: {fontSize: 11}}
+      };
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+      chart.draw(data, options);
+    }
+    </script>
+		
+	
+	<?PHP
+	
+	
+	mysqli_close($dbc);
+	?>
+	
 </body>
 </html>
