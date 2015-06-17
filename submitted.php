@@ -15,7 +15,7 @@
 	require_once('navmenu.php');
 	
 	// Declare date and time variables
-	$date = date('Y-m-d');
+	$date = date('F d, Y');
 	$time = date('g:i A');
 	$q1 = $_POST['q1'];
 	$q2 = $_POST['q2'];
@@ -31,7 +31,7 @@
 	
 	
 	$query = "INSERT INTO moment_alpha_tracker 
-			VALUES ('0','$user_id',NOW(),'$time','$q1','$q2','$q3','$q4','$q5','$q6','$q7')";
+			VALUES ('0','$user_id','$date','$time','$q1','$q2','$q3','$q4','$q5','$q6','$q7')";
 	
 	if (mysqli_query($dbc,$query)) {
     echo "<p>Thank you for tracking your current emotions.</p>";

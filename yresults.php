@@ -58,7 +58,7 @@
 	
 ?>
 
-<div id="series_chart_div" style="width: 900px; height: 500px;"></div>
+<div id="series_chart_div" style="width: 1280px; height: 700px;"></div>
 
 
 
@@ -75,28 +75,47 @@
 
     function drawSeriesChart() {
 
-var tableLength = document.querySelectorAll('tr').length - 6;
-var country = ['CAN','DEU','DNK','EGY','GBR','IRN','IRQ','ISR','RUS','USA'];
-var continent = ['North America','Europe','Middle East'];
-var randNum1 = Math.floor(Math.random()*11);
-var randNum2 = Math.floor(Math.random()*90);
-var randNum3 = Math.random()*2;
-var randNum4= Math.floor(Math.random()*3);
-var randNum5 = Math.floor(Math.random()*40000000);
+var tableLength = document.querySelector('tbody').children.length-1;
 
-var tData = [['ID', 'Life Expectancy', 'Fertility Rate', 'Region','Population']];
+var dateTimeLine;
+
+var tableDate;
+var tableTime;
+var duration;
+var mood;
+var feeling;
+
+var tData = [['ID', 'Date', 'Moment Duration', 'Feeling',     'Mood Level']];
 
 for (i=0; i<tableLength; i++) {
+	
+			tableDate = document.querySelector('tbody').children[i+1].children[2].textContent;
+			tableTime = document.querySelector('tbody').children[i+1].children[3].textContent;
+			duration = document.querySelector('tbody').children[i+1].children[7].textContent;
+			duration = parseInt('duration');
+			mood = document.querySelector('tbody').children[i+1].children[6].textContent;
+			mood = parseInt('mood');
+			feeling = document.querySelector('tbody').children[i+1].children[4].textContent;
+			dateTimeLine = Date.parse(tableDate);
 			
-			tData.push([country[randNum1] ,80.5 ,1.5 ,continent[randNum4] ,565461846] );
+			tData.push(['<?PHP echo"$user_id"; ?>',    dateTimeLine,              duration,      feeling,         mood]);
+			console.log(tData)
+			
+			randNum1 = Math.floor(Math.random()*10);
+			// randNum2 = Math.floor(Math.random()*90);
+			randNum3 = Math.random()*2;
+			randNum4= Math.floor(Math.random()*3);
+			randNum5 = Math.floor(Math.random()*40000000);
+			
+			
 		}
 
  var data = google.visualization.arrayToDataTable(tData);
 
       var options = {
         title: 'This is a test chart to see if I can develop this app',
-        hAxis: {title: 'Barf'},
-        vAxis: {title: 'Fertility Rate'},
+        hAxis: {title: 'Time'},
+        vAxis: {title: 'Moment Duration'},
         bubble: {textStyle: {fontSize: 11}}
       };
 

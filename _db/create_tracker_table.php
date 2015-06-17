@@ -15,8 +15,8 @@ $query = "CREATE TABLE moment_alpha_tracker (
 
 	record_id INT AUTO_INCREMENT,
 	user_id INT,
-	t_date DATE,
-	t_time TIME,
+	t_date TEXT,
+	t_time TEXT,
 	feeling VARCHAR(20),
 	emo_lvl INT,
 	t_trigger VARCHAR(20),
