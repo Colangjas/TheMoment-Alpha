@@ -14,6 +14,7 @@
 	$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 	$user_id = $_SESSION['user_id'];
+	$username = $_SESSION['username'];
 
 	$query = "SELECT * FROM moment_alpha_tracker WHERE '$user_id' = user_id";
 	$result = mysqli_query ($dbc, $query) or die("Error querying database ".mysqli_error($dbc));
@@ -91,14 +92,12 @@ for (i=0; i<tableLength; i++) {
 	
 			tableDate = document.querySelector('tbody').children[i+1].children[2].textContent;
 			tableTime = document.querySelector('tbody').children[i+1].children[3].textContent;
-			duration = document.querySelector('tbody').children[i+1].children[7].textContent;
-			duration = parseInt('duration');
-			mood = document.querySelector('tbody').children[i+1].children[6].textContent;
-			mood = parseInt('mood');
+			duration = parseInt(document.querySelector('tbody').children[i+1].children[7].textContent);
+			mood = parseInt(document.querySelector('tbody').children[i+1].children[6].textContent);
 			feeling = document.querySelector('tbody').children[i+1].children[4].textContent;
 			dateTimeLine = Date.parse(tableDate);
 			
-			tData.push(['<?PHP echo"$user_id"; ?>',    dateTimeLine,              duration,      feeling,         mood]);
+			tData.push([tableTime,    dateTimeLine,              duration,      feeling,         mood]);
 			console.log(tData)
 			
 			randNum1 = Math.floor(Math.random()*10);
@@ -113,7 +112,7 @@ for (i=0; i<tableLength; i++) {
  var data = google.visualization.arrayToDataTable(tData);
 
       var options = {
-        title: 'This is a test chart to see if I can develop this app',
+        title: 'Tracker Results for <?PHP echo"$username"; ?>',
         hAxis: {title: 'Time'},
         vAxis: {title: 'Moment Duration'},
         bubble: {textStyle: {fontSize: 11}}
