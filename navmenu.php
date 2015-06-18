@@ -6,11 +6,11 @@
 		echo'<li><a class="onblack" href="home.php">Home</a></li>';
 		echo'<li><a class="onblack" href="tracker.php">Update Tracker</a></li>';
 		echo'<li><a class="onblack" href="yresults.php" target="_blank">My Results</a></li>';
-		echo'<li><a class="onblack" href="logout.php">Log Out <span style="color: red;">(' . $_SESSION['username'] . ')</span></a></li>';
+		echo'<li><a class="onblack" href="logout.php">Log Out <span class="user">(' . $_SESSION['username'] . ')</span></a></li>';
 	} else {
-		echo'Please <li>
+		echo'<li>
 			<a class="onblack" href="home.php">Log In</a>
-		</li> or make a Username.';
+		</li>';
 	}
 	echo '</ul>';
 	echo '</nav>';

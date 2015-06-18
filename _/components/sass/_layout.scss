@@ -18,53 +18,98 @@ $large                : 75em;
 	padding: 0 3%;
 }
 
+//Warning ------------------------------------
+
+.warning {
+	background: $color-secondary-1-0;
+}
+
 // Form --------------------------------------
 
 .forms {
-		height: 700px;
+		height: 535px;
+		margin-top: 1.2rem;
+		background: $rgba-secondary-2-0;
+		@include box-shadow(rgba($blue, 0.4) 0 0 25px, rgba($green, 0.2) 0 0 3px 1px inset);
+		padding: 2%;
 	.register{
-	@import "compass/utilities/general/clearfix";
+	//@import "compass/utilities/general/clearfix";
+		float: left;
 		border-right: 1px $darkblue solid;
 		max-width: 500px;
 		padding-right: 1%;
+		padding-top: 3%;
 		
 		p {
 			float: right;
+			display: block-inline;
+			clear: left;
 			label {
 				width: 150px;
 				font-size: 1.4rem;
 			} // label
 			
 			input {
+			@include border-radius(38px);
+			  border: 3px solid $darkblue;
 				width: 200px;
 				height: 30px;
+				padding-left: 10px;
 			}// input
 		}// p 
+		
+		input[type="submit"] {
+			margin: 30px;
+			float: right;
+			  border: none;
+			  background: $paleyellow;
+			    padding: 10px 40px;
+				font-size: 1.2rem;
+		@include box-shadow(rgba($blue, 0.4) 0 0 25px, rgba($green, 0.2) 0 0 3px 1px inset);
+		}
 	} // register
 	.login{
-	@import "compass/utilities/general/clearfix";
+	//@import "compass/utilities/general/clearfix";
 		float: left;
 		max-width: 500px;
 		padding-left: 1%;
+		padding-top: 3%;
 		
 		p {
 			float: left;
+			display: block-inline;
+			clear: left;
 			label {
 				width: 150px;
 				font-size: 1.4rem;
+				display: inline-block;
 			} // label
 			
 			input {
+			@include border-radius(38px);
+			  border: 3px solid $darkblue;
 				width: 200px;
 				height: 30px;
+				padding-left: 10px;
 			}// input
 		}// p 
+		
+		input[type="submit"] {
+			margin: 30px;
+			float: right;
+			  border: none;
+			  background: $paleyellow;
+			    padding: 10px 40px;
+				font-size: 1.2rem;
+		@include box-shadow(rgba($blue, 0.4) 0 0 25px, rgba($green, 0.2) 0 0 3px 1px inset);
+		}
+		
 	} // register
 } // forms
 
 //Navigation ------------------------------------
 nav {
-  background: lighten($darkblue, 15);
+  background: lighten($darkblue, 30);
   ul {
   @include at-breakpoint($small) {
 	@include horizontal-list;
@@ -75,7 +120,7 @@ nav {
         padding-right: .5em;
       } //icons
 
-      a {
+      a.onblack {
 	@include single-transition(all, .5s, ease-out);
         display: block;
         text-decoration: none;
@@ -83,8 +128,13 @@ nav {
 		
 		&:hover {
 			background: $rgba-secondary-2-0;
-			a{
-				color: $darkblue;
+			color: $darkblue;
+		}
+		
+		a.user {
+			color: $rgba-secondary-2-0;
+			&:hover{
+				color: $paleyellow
 			}
 		}
 		

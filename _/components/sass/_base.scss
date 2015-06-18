@@ -5,20 +5,33 @@
   font-family: $font-primary;
   font-size: 1.2rem;
   line-height: 160%;
-  background: lighten($rgba-primary-0, 20);
-  color: $rgba-secondary-1-2;
+  @include background(linear-gradient(bottom left, rgba($rgba-primary-0, .6), rgba($rgba-primary-0, 0)),image-url('sea.png'));
+  color: $darkblue;
 }
 
 h3 {
-   @include text-shadow(rgba(blue, 0.2) 1px 1px 0, rgba(blue, 0.2) 2px 2px 0, rgba(blue, 0.2) 3px 3px 0);
-  font-size: 2.2rem;
+   @include text-shadow(rgba($red, 0.4) 5px -3px 0, rgba($blue, 0.4) 20px 2px 0, rgba($purple, 0.5) 46px 19px 0);
+  font-size: 6.2rem;
   color: $darkblue;
-  margin-bottom: .4rem;
+  margin-bottom: 2rem;
   border-bottom: 1px solid $lightgray;
-  padding-top: 10px;
+  padding-top: 35px;
 }
 
 a {
   text-decoration: none;
   color: $rgba-secondary-1-0;
+}
+
+p {
+	color: darken($darkblue, 20);
+  font-weight: 900;
+  line-height: 3.2rem;
+  font-size: 1.7rem;
+  //text-shadow: $darkblue 0px 5px 37px;
+}
+
+legend {
+	font-size: 2rem;
+	line-height: 3rem;
 }

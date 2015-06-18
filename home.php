@@ -35,7 +35,7 @@
 						$home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/tracker.php';
 						header('Location: ' . $home_url);
 						
-						echo'<p>Login Successful!</p>';
+						echo'<section class="warning"><p>Login Successful!</p></section>';
 						
 					}else {
 						// The username/password are incorrect so set an error message
@@ -45,7 +45,7 @@
 						// The username/password are incorrect so set an error message
 						$error_msg	= 'You must enter your username to log in.';		
 				}
-	}else{echo '<p class="error">You are logged in as ' . $_SESSION['username'] . '. If this isn\'t you please logout and sign in again</p>';}
+	}else{echo '<section class="warning"><p class="error">You are logged in as ' . $_SESSION['username'] . '. If this isn\'t you please logout and sign in again</p></section>';}
 			
 		if (!isset($_SESSION['user_id'])){
 			if (isset($_POST['submit'])) {
@@ -63,20 +63,20 @@
 						mysqli_query($dbc, $query);
 						
 						// Confirm success with user
-						echo'<p>Your new account has been successfully created. You\'re now ready to <a class="onblack" href="home.php">log in</a></p>';
+						echo'<section class="warning"><p>Your new account has been successfully created. You\'re now ready to <a class="onblack" href="home.php">log in</a></p></section>';
 						
 						mysqli_close($dbc);
 						exit();
 					} else {
 						// An account already exists for this username, so display an error message
-						echo '<p class="error">An account already exists for this username. Use a different one.</p>';
+						echo '<section class="warning"><p class="error">An account already exists for this username. Use a different one.</p></section>';
 						$reg_username = "";
 				}
 			} else {
-				echo'<p class="error">You must enter all of the sign-up data.</p>';
+				echo'<section class="warning"><p class="error">You must enter all of the sign-up data.</p>';
 				}
 			}
-		}else {echo'<p>You must <a class="onblack" href="logout.php">logout</a> to register a new account.</p>';}
+		}else {echo'<section class="warning"><p>You must <a class="onblack" href="logout.php">logout</a> to register a new account.</p></section>';}
 		
 		
 		mysqli_close($dbc);
