@@ -21,5 +21,74 @@ $large                : 75em;
 // Form --------------------------------------
 
 .forms {
-	background: $cyan;
-}
+		height: 700px;
+	.register{
+	@import "compass/utilities/general/clearfix";
+		border-right: 1px $darkblue solid;
+		max-width: 500px;
+		padding-right: 1%;
+		
+		p {
+			float: right;
+			label {
+				width: 150px;
+				font-size: 1.4rem;
+			} // label
+			
+			input {
+				width: 200px;
+				height: 30px;
+			}// input
+		}// p 
+	} // register
+	.login{
+	@import "compass/utilities/general/clearfix";
+		float: left;
+		max-width: 500px;
+		padding-left: 1%;
+		
+		p {
+			float: left;
+			label {
+				width: 150px;
+				font-size: 1.4rem;
+			} // label
+			
+			input {
+				width: 200px;
+				height: 30px;
+			}// input
+		}// p 
+	} // register
+} // forms
+
+//Navigation ------------------------------------
+nav {
+  background: lighten($darkblue, 15);
+  ul {
+  @include at-breakpoint($small) {
+	@include horizontal-list;
+  }
+    li {
+      i {
+        color: lighten($yellow, 20);
+        padding-right: .5em;
+      } //icons
+
+      a {
+	@include single-transition(all, .5s, ease-out);
+        display: block;
+        text-decoration: none;
+        padding: 5px 10px;
+		
+		&:hover {
+			background: $rgba-secondary-2-0;
+			a{
+				color: $darkblue;
+			}
+		}
+		
+      } //a
+    } //li
+  } //ul
+} // navigation

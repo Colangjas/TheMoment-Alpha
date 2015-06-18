@@ -1,55 +1,24 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'); 
-
-body {
+ 
+ body {
   font-family: $font-primary;
   font-size: 1.2rem;
   line-height: 160%;
-  background: $color-primary-2;
-  color: $color-secondary-1-0;
-}
-
-#{headings()} {
-  font-family: $font-secondary;
-  font-weight: normal;
-  color: $color-secondary-1-0;
-  @include text-shadow($color-primary-0 1px 1px);
-}
-
-h1 {
-  font-size: 2.2rem;
-  color: lighten($color-secondary-1-0, 25);
-  margin-bottom: .4rem;
-  border-bottom: 1px solid $color-secondary-1-0;
-  padding-top: 10px;
-}
-
-h2 {
-  font-size: 1.5rem;
-  line-height: 100%;
-  margin: 20px 0 0 0;
-  color: $color-secondary-1-0;
+  background: lighten($rgba-primary-0, 20);
+  color: $rgba-secondary-1-2;
 }
 
 h3 {
-  font-size: 1.8rem;
-  line-height: 60%;
-  color: $color-secondary-1-0;
+   @include text-shadow(rgba(blue, 0.2) 1px 1px 0, rgba(blue, 0.2) 2px 2px 0, rgba(blue, 0.2) 3px 3px 0);
+  font-size: 2.2rem;
+  color: $darkblue;
+  margin-bottom: .4rem;
+  border-bottom: 1px solid $lightgray;
+  padding-top: 10px;
 }
 
 a {
   text-decoration: none;
-  color: lighter($paleyellow, 20);
-  &:hover {
-    color: $color-secondary-1-0;
-  }
-}
-
-p {
-  margin-bottom: 10px;
-}
-
-.small {
-  font-size: 1rem;
-  color: $color-secondary-1-0;
+  color: $rgba-secondary-1-0;
 }

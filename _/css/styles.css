@@ -61,53 +61,22 @@ body {
   font-family: Merriweather, serif;
   font-size: 1.2rem;
   line-height: 160%;
-  background: #2FA4FF;
-  color: #FFBF00; }
+  background: #71c1ff;
+  color: #ffc720; }
 
 /* line 12, ../components/sass/_base.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: Bree Serif, serif;
-  font-weight: normal;
-  color: #FFBF00;
-  text-shadow: #0B95FF 1px 1px; }
-
-/* line 19, ../components/sass/_base.scss */
-h1 {
+h3 {
+  text-shadow: rgba(0, 0, 255, 0.2) 1px 1px 0, rgba(0, 0, 255, 0.2) 2px 2px 0, rgba(0, 0, 255, 0.2) 3px 3px 0;
   font-size: 2.2rem;
-  color: #ffdf80;
+  color: #0A2933;
   margin-bottom: .4rem;
-  border-bottom: 1px solid #FFBF00;
+  border-bottom: 1px solid #819090;
   padding-top: 10px; }
 
-/* line 27, ../components/sass/_base.scss */
-h2 {
-  font-size: 1.5rem;
-  line-height: 100%;
-  margin: 20px 0 0 0;
-  color: #FFBF00; }
-
-/* line 34, ../components/sass/_base.scss */
-h3 {
-  font-size: 1.8rem;
-  line-height: 60%;
-  color: #FFBF00; }
-
-/* line 40, ../components/sass/_base.scss */
+/* line 21, ../components/sass/_base.scss */
 a {
   text-decoration: none;
-  color: lighter(#EAE3CB, 20); }
-  /* line 43, ../components/sass/_base.scss */
-  a:hover {
-    color: #FFBF00; }
-
-/* line 48, ../components/sass/_base.scss */
-p {
-  margin-bottom: 10px; }
-
-/* line 52, ../components/sass/_base.scss */
-.small {
-  font-size: 1rem;
-  color: #FFBF00; }
+  color: #ffbf00; }
 
 /* line 14, C:/Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
 * {
@@ -133,4 +102,85 @@ p {
 
 /* line 23, ../components/sass/_layout.scss */
 .forms {
-  background: #259286; }
+  height: 700px; }
+  /* line 25, ../components/sass/_layout.scss */
+  .forms .register {
+    border-right: 1px #0A2933 solid;
+    max-width: 500px;
+    padding-right: 1%; }
+    /* line 31, ../components/sass/_layout.scss */
+    .forms .register p {
+      float: right; }
+      /* line 33, ../components/sass/_layout.scss */
+      .forms .register p label {
+        width: 150px;
+        font-size: 1.4rem; }
+      /* line 38, ../components/sass/_layout.scss */
+      .forms .register p input {
+        width: 200px;
+        height: 30px; }
+  /* line 44, ../components/sass/_layout.scss */
+  .forms .login {
+    float: left;
+    max-width: 500px;
+    padding-left: 1%; }
+    /* line 50, ../components/sass/_layout.scss */
+    .forms .login p {
+      float: left; }
+      /* line 52, ../components/sass/_layout.scss */
+      .forms .login p label {
+        width: 150px;
+        font-size: 1.4rem; }
+      /* line 57, ../components/sass/_layout.scss */
+      .forms .login p input {
+        width: 200px;
+        height: 30px; }
+
+/* line 66, ../components/sass/_layout.scss */
+nav {
+  background: #175c73; }
+  @media (min-width: 30em) {
+    /* line 68, ../components/sass/_layout.scss */
+    nav ul {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      *zoom: 1; }
+      /* line 62, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+      nav ul li {
+        list-style-image: none;
+        list-style-type: none;
+        margin-left: 0;
+        white-space: nowrap;
+        float: left;
+        padding-left: 4px;
+        padding-right: 4px; }
+        /* line 49, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+        nav ul li:first-child {
+          padding-left: 0; }
+        /* line 50, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+        nav ul li:last-child {
+          padding-right: 0; }
+        /* line 52, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
+        nav ul li.last {
+          padding-right: 0; } }
+  /* line 73, ../components/sass/_layout.scss */
+  nav ul li i {
+    color: #f7b71a;
+    padding-right: .5em; }
+  /* line 78, ../components/sass/_layout.scss */
+  nav ul li a {
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    display: block;
+    text-decoration: none;
+    padding: 5px 10px; }
+    /* line 84, ../components/sass/_layout.scss */
+    nav ul li a:hover {
+      background: #ff4900; }
+      /* line 86, ../components/sass/_layout.scss */
+      nav ul li a:hover a {
+        color: #0A2933; }
