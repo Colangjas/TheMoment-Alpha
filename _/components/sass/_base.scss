@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light|Indie+Flower|Bree+Serif|Merriweather|Pacifico|Architects+Daughter);
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'); 
  
  body {
@@ -6,15 +6,18 @@
   font-size: 1.2rem;
   line-height: 160%;
   @include background(linear-gradient(bottom left, rgba($rgba-primary-0, .6), rgba($rgba-primary-0, 0)),image-url('sea.png'));
+   background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: 30% 20%;
   color: $darkblue;
 }
 
 h3 {
    @include text-shadow(rgba($red, 0.4) 5px -3px 0, rgba($blue, 0.4) 20px 2px 0, rgba($purple, 0.5) 46px 19px 0);
+   font-family: $font-fifth;
   font-size: 6.2rem;
   color: $darkblue;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid $lightgray;
+  margin-bottom: 4.5rem;
   padding-top: 35px;
 }
 

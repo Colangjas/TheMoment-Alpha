@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather");
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light|Indie+Flower|Bree+Serif|Merriweather|Pacifico|Architects+Daughter);
 @import url("http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
 /* line 5, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -61,35 +61,38 @@ body {
   font-family: Merriweather, serif;
   font-size: 1.2rem;
   line-height: 160%;
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBiOTVmZiIgc3RvcC1vcGFjaXR5PSIwLjYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYjk1ZmYiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('../../images/sea.png?1434653411');
-  background: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, rgba(11, 149, 255, 0.6)), color-stop(100%, rgba(11, 149, 255, 0))), url('../../images/sea.png?1434653411');
-  background: -moz-linear-gradient(bottom left, rgba(11, 149, 255, 0.6), rgba(11, 149, 255, 0)), url('../../images/sea.png?1434653411');
-  background: -webkit-linear-gradient(bottom left, rgba(11, 149, 255, 0.6), rgba(11, 149, 255, 0)), url('../../images/sea.png?1434653411');
-  background: linear-gradient(to top right, rgba(11, 149, 255, 0.6), rgba(11, 149, 255, 0)), url('../../images/sea.png?1434653411');
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBiOTVmZiIgc3RvcC1vcGFjaXR5PSIwLjYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYjk1ZmYiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('../../images/sea.png?1434720605');
+  background: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, rgba(11, 149, 255, 0.6)), color-stop(100%, rgba(11, 149, 255, 0))), url('../../images/sea.png?1434720605');
+  background: -moz-linear-gradient(bottom left, rgba(11, 149, 255, 0.6), rgba(11, 149, 255, 0)), url('../../images/sea.png?1434720605');
+  background: -webkit-linear-gradient(bottom left, rgba(11, 149, 255, 0.6), rgba(11, 149, 255, 0)), url('../../images/sea.png?1434720605');
+  background: linear-gradient(to top right, rgba(11, 149, 255, 0.6), rgba(11, 149, 255, 0)), url('../../images/sea.png?1434720605');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: 30% 20%;
   color: #0A2933; }
 
-/* line 12, ../components/sass/_base.scss */
+/* line 15, ../components/sass/_base.scss */
 h3 {
   text-shadow: rgba(209, 28, 36, 0.4) 5px -3px 0, rgba(33, 118, 199, 0.4) 20px 2px 0, rgba(89, 90, 183, 0.5) 46px 19px 0;
+  font-family: "Pacifico", cursive;
   font-size: 6.2rem;
   color: #0A2933;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #819090;
+  margin-bottom: 4.5rem;
   padding-top: 35px; }
 
-/* line 21, ../components/sass/_base.scss */
+/* line 24, ../components/sass/_base.scss */
 a {
   text-decoration: none;
   color: #ffbf00; }
 
-/* line 26, ../components/sass/_base.scss */
+/* line 29, ../components/sass/_base.scss */
 p {
   color: black;
   font-weight: 900;
   line-height: 3.2rem;
   font-size: 1.7rem; }
 
-/* line 34, ../components/sass/_base.scss */
+/* line 37, ../components/sass/_base.scss */
 legend {
   font-size: 2rem;
   line-height: 3rem; }
@@ -203,10 +206,20 @@ legend {
       box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset; }
 
 /* line 111, ../components/sass/_layout.scss */
+.trackerform {
+  height: 700px;
+  margin-top: 1.2rem;
+  background: #ff4900;
+  -moz-box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
+  -webkit-box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
+  box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
+  padding: 2%; }
+
+/* line 121, ../components/sass/_layout.scss */
 nav {
   background: #2390b3; }
   @media (min-width: 30em) {
-    /* line 113, ../components/sass/_layout.scss */
+    /* line 123, ../components/sass/_layout.scss */
     nav ul {
       margin: 0;
       padding: 0;
@@ -231,11 +244,11 @@ nav {
         /* line 52, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
         nav ul li.last {
           padding-right: 0; } }
-  /* line 118, ../components/sass/_layout.scss */
+  /* line 128, ../components/sass/_layout.scss */
   nav ul li i {
     color: #f7b71a;
     padding-right: .5em; }
-  /* line 123, ../components/sass/_layout.scss */
+  /* line 133, ../components/sass/_layout.scss */
   nav ul li a.onblack {
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
@@ -244,13 +257,13 @@ nav {
     display: block;
     text-decoration: none;
     padding: 5px 10px; }
-    /* line 129, ../components/sass/_layout.scss */
+    /* line 139, ../components/sass/_layout.scss */
     nav ul li a.onblack:hover {
       background: #ff4900;
       color: #0A2933; }
-    /* line 134, ../components/sass/_layout.scss */
+    /* line 144, ../components/sass/_layout.scss */
     nav ul li a.onblack a.user {
       color: #ff4900; }
-      /* line 136, ../components/sass/_layout.scss */
+      /* line 146, ../components/sass/_layout.scss */
       nav ul li a.onblack a.user:hover {
         color: #EAE3CB; }
