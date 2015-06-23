@@ -214,12 +214,23 @@ legend {
   -webkit-box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
   box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
   padding: 2%; }
+  /* line 118, ../components/sass/_layout.scss */
+  .trackerform input[type="submit"] {
+    margin: 30px;
+    float: right;
+    border: none;
+    background: #EAE3CB;
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    -moz-box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
+    -webkit-box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
+    box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset; }
 
-/* line 121, ../components/sass/_layout.scss */
+/* line 131, ../components/sass/_layout.scss */
 nav {
   background: #2390b3; }
   @media (min-width: 30em) {
-    /* line 123, ../components/sass/_layout.scss */
+    /* line 133, ../components/sass/_layout.scss */
     nav ul {
       margin: 0;
       padding: 0;
@@ -244,11 +255,11 @@ nav {
         /* line 52, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
         nav ul li.last {
           padding-right: 0; } }
-  /* line 128, ../components/sass/_layout.scss */
+  /* line 138, ../components/sass/_layout.scss */
   nav ul li i {
     color: #f7b71a;
     padding-right: .5em; }
-  /* line 133, ../components/sass/_layout.scss */
+  /* line 143, ../components/sass/_layout.scss */
   nav ul li a.onblack {
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
@@ -257,13 +268,65 @@ nav {
     display: block;
     text-decoration: none;
     padding: 5px 10px; }
-    /* line 139, ../components/sass/_layout.scss */
+    /* line 149, ../components/sass/_layout.scss */
     nav ul li a.onblack:hover {
       background: #ff4900;
       color: #0A2933; }
-    /* line 144, ../components/sass/_layout.scss */
+    /* line 154, ../components/sass/_layout.scss */
     nav ul li a.onblack a.user {
       color: #ff4900; }
-      /* line 146, ../components/sass/_layout.scss */
+      /* line 156, ../components/sass/_layout.scss */
       nav ul li a.onblack a.user:hover {
         color: #EAE3CB; }
+
+/* line 168, ../components/sass/_layout.scss */
+.quest {
+  float: left;
+  border-right: 1px #0A2933 solid;
+  max-width: 500px;
+  padding-right: 1%;
+  padding-top: 3%; }
+  /* line 176, ../components/sass/_layout.scss */
+  .quest p {
+    float: right;
+    display: block-inline;
+    clear: left; }
+    /* line 180, ../components/sass/_layout.scss */
+    .quest p label {
+      width: 150px;
+      font-size: 1.4rem; }
+    /* line 185, ../components/sass/_layout.scss */
+    .quest p input {
+      -moz-border-radius: 38px;
+      -webkit-border-radius: 38px;
+      border-radius: 38px;
+      border: 3px solid #0A2933;
+      width: 200px;
+      height: 30px;
+      padding-left: 10px; }
+
+/* line 195, ../components/sass/_layout.scss */
+.moods {
+  float: left;
+  border-right: 1px #0A2933 solid;
+  max-width: 500px;
+  padding-right: 1%;
+  padding-top: 3%; }
+  /* line 203, ../components/sass/_layout.scss */
+  .moods p {
+    float: right;
+    display: block-inline;
+    clear: left; }
+    /* line 207, ../components/sass/_layout.scss */
+    .moods p label {
+      width: 150px;
+      font-size: 1.4rem; }
+    /* line 212, ../components/sass/_layout.scss */
+    .moods p input {
+      -moz-border-radius: 38px;
+      -webkit-border-radius: 38px;
+      border-radius: 38px;
+      border: 3px solid #0A2933;
+      width: 200px;
+      height: 30px;
+      padding-left: 10px; }

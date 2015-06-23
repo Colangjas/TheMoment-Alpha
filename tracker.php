@@ -23,7 +23,7 @@
 			<form method="post" action="submitted.php">
 				<fieldset>
 					<legend>Track My Emotions</legend>
-					<div id="quest">
+					<div class="quest">
 					<label for="q1">What's Wrong?</label>
 					<select name="q1">
 						<option value="anxious">Anxious</option>
@@ -43,7 +43,7 @@
 					</select>
 					</div>
 				
-					<div id="moods">
+					<div class="moods">
 					<label for="q2">Rate Your Level of Emotion:</label>
 				
 						<ul>
@@ -56,7 +56,7 @@
 					<input type="range" name="q2" min="1" max="10" id="q2" />
 					</div>
 					
-					<div id="quest">
+					<div class="quest">
 					 <label for="q3">Trigger:</label>
 					<select name="q3">
 						<option value="self">Self</option>
@@ -69,12 +69,12 @@
 					</select>
 					</div>
 					
-					<div id="quest">
+					<div class="quest">
 					<label for="q4">Duration (hours):</label>
 					<input type="number" id="q4" name="q4" placeholder="1" />
 					</div>
 					
-					<div id="quest">
+					<div class="quest">
 					<label for="q5">Place:</label>
 					<select name="q5">
 						<option value="home">Home</option>
@@ -84,12 +84,12 @@
 					</select>
 					</div>
 					
-					<div id="quest">
+					<div class="quest">
 					<label for="q6">Coping Strategies:</label><br />
 					<textarea name="q6" cols="30" rows="2" maxlength="150"></textarea>
 					</div>
 					
-					<div id="quest">
+					<div class="quest">
 					<label for="q7">Any Other Information:</label><br />
 					<textarea name="q7" cols="30" rows="2" maxlength="150" placeholder="If you selected 'other' for any of the options or just want to clarify and give extra input please put it here."></textarea>
 					</div>

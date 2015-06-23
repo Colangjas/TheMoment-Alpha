@@ -114,6 +114,16 @@ $large                : 75em;
 		background: $rgba-secondary-2-0;
 		@include box-shadow(rgba($blue, 0.4) 0 0 25px, rgba($green, 0.2) 0 0 3px 1px inset);
 		padding: 2%;
+		
+		input[type="submit"] {
+			margin: 30px;
+			float: right;
+			  border: none;
+			  background: $paleyellow;
+			    padding: 10px 40px;
+				font-size: 1.2rem;
+		@include box-shadow(rgba($blue, 0.4) 0 0 25px, rgba($green, 0.2) 0 0 3px 1px inset);
+		}
 	
 }
 
@@ -152,3 +162,59 @@ nav {
     } //li
   } //ul
 } // navigation
+
+// Tracker Questions ------------------------------
+
+.quest {
+	//@import "compass/utilities/general/clearfix";
+		float: left;
+		border-right: 1px $darkblue solid;
+		max-width: 500px;
+		padding-right: 1%;
+		padding-top: 3%;
+		
+		p {
+			float: right;
+			display: block-inline;
+			clear: left;
+			label {
+				width: 150px;
+				font-size: 1.4rem;
+			} // label
+			
+			input {
+			@include border-radius(38px);
+			  border: 3px solid $darkblue;
+				width: 200px;
+				height: 30px;
+				padding-left: 10px;
+			}// input
+		}// p 
+}// quest 
+
+.moods {
+	//@import "compass/utilities/general/clearfix";
+		float: left;
+		border-right: 1px $darkblue solid;
+		max-width: 500px;
+		padding-right: 1%;
+		padding-top: 3%;
+		
+		p {
+			float: right;
+			display: block-inline;
+			clear: left;
+			label {
+				width: 150px;
+				font-size: 1.4rem;
+			} // label
+			
+			input {
+			@include border-radius(38px);
+			  border: 3px solid $darkblue;
+				width: 200px;
+				height: 30px;
+				padding-left: 10px;
+			}// input
+		}// p 
+}// moods 
