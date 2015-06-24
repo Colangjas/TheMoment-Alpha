@@ -86,13 +86,18 @@ a {
   color: #ffbf00; }
 
 /* line 29, ../components/sass/_base.scss */
+a.onblack {
+  text-decoration: none;
+  color: #FCF4DC; }
+
+/* line 34, ../components/sass/_base.scss */
 p {
   color: black;
   font-weight: 900;
   line-height: 3.2rem;
   font-size: 1.7rem; }
 
-/* line 37, ../components/sass/_base.scss */
+/* line 42, ../components/sass/_base.scss */
 legend {
   font-size: 2rem;
   line-height: 3rem; }
@@ -126,29 +131,32 @@ legend {
 /* line 29, ../components/sass/_layout.scss */
 .forms {
   height: 535px;
+  min-width: 584px;
   margin-top: 1.2rem;
   background: #ff4900;
   -moz-box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
   -webkit-box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
   box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
   padding: 2%; }
-  /* line 35, ../components/sass/_layout.scss */
+  /* line 36, ../components/sass/_layout.scss */
   .forms .register {
     float: left;
     border-right: 1px #0A2933 solid;
     max-width: 500px;
+    width: 50%;
+    min-width: 280px;
     padding-right: 1%;
     padding-top: 3%; }
-    /* line 43, ../components/sass/_layout.scss */
+    /* line 46, ../components/sass/_layout.scss */
     .forms .register p {
       float: right;
       display: block-inline;
       clear: left; }
-      /* line 47, ../components/sass/_layout.scss */
+      /* line 50, ../components/sass/_layout.scss */
       .forms .register p label {
         width: 150px;
         font-size: 1.4rem; }
-      /* line 52, ../components/sass/_layout.scss */
+      /* line 55, ../components/sass/_layout.scss */
       .forms .register p input {
         -moz-border-radius: 38px;
         -webkit-border-radius: 38px;
@@ -157,7 +165,7 @@ legend {
         width: 200px;
         height: 30px;
         padding-left: 10px; }
-    /* line 61, ../components/sass/_layout.scss */
+    /* line 64, ../components/sass/_layout.scss */
     .forms .register input[type="submit"] {
       margin: 30px;
       float: right;
@@ -168,23 +176,25 @@ legend {
       -moz-box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
       -webkit-box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
       box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset; }
-  /* line 71, ../components/sass/_layout.scss */
+  /* line 74, ../components/sass/_layout.scss */
   .forms .login {
     float: left;
     max-width: 500px;
+    width: 50%;
+    min-width: 280px;
     padding-left: 1%;
     padding-top: 3%; }
-    /* line 78, ../components/sass/_layout.scss */
+    /* line 83, ../components/sass/_layout.scss */
     .forms .login p {
       float: left;
       display: block-inline;
       clear: left; }
-      /* line 82, ../components/sass/_layout.scss */
+      /* line 87, ../components/sass/_layout.scss */
       .forms .login p label {
         width: 150px;
         font-size: 1.4rem;
         display: inline-block; }
-      /* line 88, ../components/sass/_layout.scss */
+      /* line 93, ../components/sass/_layout.scss */
       .forms .login p input {
         -moz-border-radius: 38px;
         -webkit-border-radius: 38px;
@@ -193,7 +203,7 @@ legend {
         width: 200px;
         height: 30px;
         padding-left: 10px; }
-    /* line 97, ../components/sass/_layout.scss */
+    /* line 102, ../components/sass/_layout.scss */
     .forms .login input[type="submit"] {
       margin: 30px;
       float: right;
@@ -205,7 +215,7 @@ legend {
       -webkit-box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
       box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset; }
 
-/* line 111, ../components/sass/_layout.scss */
+/* line 116, ../components/sass/_layout.scss */
 .trackerform {
   height: 700px;
   margin-top: 1.2rem;
@@ -214,7 +224,7 @@ legend {
   -webkit-box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
   box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
   padding: 2%; }
-  /* line 118, ../components/sass/_layout.scss */
+  /* line 123, ../components/sass/_layout.scss */
   .trackerform input[type="submit"] {
     margin: 30px;
     float: right;
@@ -226,11 +236,11 @@ legend {
     -webkit-box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset;
     box-shadow: rgba(33, 118, 199, 0.4) 0 0 25px, rgba(115, 138, 5, 0.2) 0 0 3px 1px inset; }
 
-/* line 131, ../components/sass/_layout.scss */
+/* line 136, ../components/sass/_layout.scss */
 nav {
   background: #2390b3; }
   @media (min-width: 30em) {
-    /* line 133, ../components/sass/_layout.scss */
+    /* line 138, ../components/sass/_layout.scss */
     nav ul {
       margin: 0;
       padding: 0;
@@ -255,11 +265,11 @@ nav {
         /* line 52, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/lists/_horizontal-list.scss */
         nav ul li.last {
           padding-right: 0; } }
-  /* line 138, ../components/sass/_layout.scss */
+  /* line 143, ../components/sass/_layout.scss */
   nav ul li i {
     color: #f7b71a;
     padding-right: .5em; }
-  /* line 143, ../components/sass/_layout.scss */
+  /* line 148, ../components/sass/_layout.scss */
   nav ul li a.onblack {
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
@@ -268,34 +278,34 @@ nav {
     display: block;
     text-decoration: none;
     padding: 5px 10px; }
-    /* line 149, ../components/sass/_layout.scss */
+    /* line 154, ../components/sass/_layout.scss */
     nav ul li a.onblack:hover {
       background: #ff4900;
       color: #0A2933; }
-    /* line 154, ../components/sass/_layout.scss */
+    /* line 159, ../components/sass/_layout.scss */
     nav ul li a.onblack a.user {
       color: #ff4900; }
-      /* line 156, ../components/sass/_layout.scss */
+      /* line 161, ../components/sass/_layout.scss */
       nav ul li a.onblack a.user:hover {
         color: #EAE3CB; }
 
-/* line 168, ../components/sass/_layout.scss */
+/* line 173, ../components/sass/_layout.scss */
 .quest {
   float: left;
   border-right: 1px #0A2933 solid;
   max-width: 500px;
   padding-right: 1%;
   padding-top: 3%; }
-  /* line 176, ../components/sass/_layout.scss */
+  /* line 181, ../components/sass/_layout.scss */
   .quest p {
     float: right;
     display: block-inline;
     clear: left; }
-    /* line 180, ../components/sass/_layout.scss */
+    /* line 185, ../components/sass/_layout.scss */
     .quest p label {
       width: 150px;
       font-size: 1.4rem; }
-    /* line 185, ../components/sass/_layout.scss */
+    /* line 190, ../components/sass/_layout.scss */
     .quest p input {
       -moz-border-radius: 38px;
       -webkit-border-radius: 38px;
@@ -305,23 +315,23 @@ nav {
       height: 30px;
       padding-left: 10px; }
 
-/* line 195, ../components/sass/_layout.scss */
+/* line 200, ../components/sass/_layout.scss */
 .moods {
   float: left;
   border-right: 1px #0A2933 solid;
   max-width: 500px;
   padding-right: 1%;
   padding-top: 3%; }
-  /* line 203, ../components/sass/_layout.scss */
+  /* line 208, ../components/sass/_layout.scss */
   .moods p {
     float: right;
     display: block-inline;
     clear: left; }
-    /* line 207, ../components/sass/_layout.scss */
+    /* line 212, ../components/sass/_layout.scss */
     .moods p label {
       width: 150px;
       font-size: 1.4rem; }
-    /* line 212, ../components/sass/_layout.scss */
+    /* line 217, ../components/sass/_layout.scss */
     .moods p input {
       -moz-border-radius: 38px;
       -webkit-border-radius: 38px;

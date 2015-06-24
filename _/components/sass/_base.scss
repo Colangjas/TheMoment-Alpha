@@ -26,6 +26,11 @@ a {
   color: $rgba-secondary-1-0;
 }
 
+a.onblack {
+  text-decoration: none;
+  color: $paleryellow;
+}
+
 p {
 	color: darken($darkblue, 20);
   font-weight: 900;
